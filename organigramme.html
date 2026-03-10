@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Organigramme Personnalisé</title>
+  <script src="https://unpkg.com/gojs/release/go.js"></script>
+  <link rel="stylesheet" href="../css/organigramme.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="org-background">
+
+<!-- HEADER -->
+<div class="header">
+        <div class="sides">
+            
+        </div>
+
+        <nav class="header-nav">
+            <a href="../html/index.html">Accueil</a>
+            <a href="../html/dashboard.html">Tableau</a>
+            <a href="../html/organigramme.html">Organigramme</a>
+            <a href="../html/course.html">Sociologie</a>
+            <a href="../html/admin_view.html">Élèves</a>
+            <a href="../html/test_graph.html">Graphique</a>
+        </nav>
+    </div>
+
+
+
+<h2 class="org-title">Organigramme de l'entreprise</h2>
+
+<div class="org-box">
+  <div id="diagramDiv"></div>
+</div>
+
+<!-- BOUTONS ZOOM -->
+<div class="org-buttons">
+  <button class="btn" onclick="zoomIn()">➕ Zoomer</button>
+  <button class="btn" onclick="zoomOut()">➖ Dézoomer</button>
+</div>
+
+<!-- MODALE -->
+<div id="modal" class="modal popup">
+  <span class="close" onclick="document.getElementById('modal').style.display='none'">✖</span>
+  <h3 id="modal-title"></h3>
+
+  <label for="modal-role">Rôle</label>
+  <input id="modal-role" type="text">
+
+  <label for="modal-age">Âge</label>
+  <input id="modal-age" type="number">
+
+  <label for="modal-sector">Secteur</label>
+  <input id="modal-sector" type="text">
+
+  <div id="modal-custom"></div>
+
+  <button class="btn btn-secondary" id="add-field-btn"> Ajouter un champ</button>
+  <button class="btn btn-primary" id="save-btn"> Enregistrer</button>
+</div>
+
+<!-- AUTRES BOUTONS -->
+<div class="org-buttons">
+  <button class="btn btn-primary" id="saveGraphBtn"> Enregistrer l'organigramme</button>
+
+  <button class="btn btn-secondary" onclick="graph_informel()"> Organigramme informel</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2026 Orgalink. Mentions légales</p>
+    <nav>
+      <a href="../html/about.html">À propos de nous </a> |
+      <a href="../html/course.html">Organisation Relationnelle</a> |
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/organigramme.js"></script>
+</body>
+</html>
