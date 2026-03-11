@@ -1,4 +1,5 @@
 <?php
+/* test git */
 include 'config.php';
 
 if (isset($_POST['submit'])) {
